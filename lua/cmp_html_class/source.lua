@@ -22,7 +22,7 @@ end
 function source.is_available()
   local filetypes = { 'twig', 'html' }
 
-  return vim.tbl_contains(filetypes, vim.bo.filetype)
+  return next(classes) ~= nil and vim.tbl_contains(filetypes, vim.bo.filetype)
 end
 
 function source.get_trigger_characters()
