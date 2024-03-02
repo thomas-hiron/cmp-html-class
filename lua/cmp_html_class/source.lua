@@ -3,9 +3,11 @@ local source = {}
 local generated_html_classes = vim.fn.expand('~/generated_html_classes.json')
 
 local classes = {}
-for k, class in pairs(vim.fn.readfile(generated_html_classes)) do
-  local json = vim.fn.json_decode(class)
-  table.insert(classes, json)
+if vim.fn.filereadable(generated_html_classes) == 1 then
+  for k, class in pairs(vim.fn.readfile(generated_html_classes)) do
+    local json = vim.fn.json_decode(class)
+    table.insert(classes, json)
+  end
 end
 
 function source.new()
