@@ -1,5 +1,11 @@
 # cmp-html-class
 
+### ⚠️  This repo has been moved ⚠️
+
+This code has been merged to https://github.com/thomas-hiron/cmp-symfony.
+
+---
+
 [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) source for html classes.  
 This plugin autocompletes class tags using a pre-generated json file.  
 
